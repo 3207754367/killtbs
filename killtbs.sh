@@ -1,4 +1,6 @@
 #/!bin/bash
+
+chmod +x killtbs.sh
 qqmusic=/data/data/com.tencent.qqmusic/app_tbs
 wx=/data/data/com.tencent.mm/app_tbs
 qq=/data/data/com.tencent.mobileqq/app_tbs
