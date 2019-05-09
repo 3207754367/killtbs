@@ -6,10 +6,10 @@ qqmusic_Ad=/data/media/0/qqmusic/splash
 qqmusic_Ad2=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash
 wx_tbs=/data/data/com.tencent.mm/app_tbs
 qq_tbs=/data/data/com.tencent.mobileqq/app_tbs
-qqAd_Sdk=/data/media/0/Tencent/TMAssistantSDK
-qqAd_Sdk2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/TMAssistantSDK
-qqsplash_Ad=/data/media/0/Tencent/MobileQQ/splahAD
-qqsplash_Ad2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/MobileQQ/splahAD
+qqAd_Sdk=/data/media/0/tencent/TMAssistantSDK
+qqAd_Sdk2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/TMAssistantSDK
+qqsplash_Ad=/data/media/0/tencent/MobileQQ/splahAD
+qqsplash_Ad2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/splahAD
 qqlive_tbs=/data/data/com.tencent.qqlive/app_tbs
 douyin_splash=/data/media/0/Android/data/com.ss.android.ugc.aweme/splashCache
 
@@ -20,13 +20,13 @@ else
 fi
  
 
-if [ -d $qqsplash_Ad ] ; then
+if [ ! -d $qqsplash_Ad ] ; then
 	qqsplash_Ad=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/MobileQQ/splahAD
 else 
 	qqsplash_Ad2=/data/media/0/Tencent/MobileQQ/splahAD
 fi
 
-if [ -d $qqAd_Sdk ] ;then
+if [ ! -d $qqAd_Sdk ] ;then
 	qqAd_Sdk=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/TMAssistantSDK
 else 
 	qqAd_Sdk2=/data/media/0/Tencent/MobileQQ/splahAD
@@ -54,12 +54,12 @@ elif [ -d $qqsplash_Ad ] ; then
 	rm -rf $qqsplash_Ad && touch $qqsplash_Ad
 elif [ -d $qqsplash_Ad2 ] ; then
 	rm -rf $qqsplash_Ad2 && touch $qqsplash_Ad2
-elif [ -d $qqAd_sdk ] ; then
-	rm -rf $qqAd_Sdk && touch $qqAd_Sdk
 elif [ -d $qqAd_Sdk ] ; then
+	rm -rf $qqAd_Sdk && touch $qqAd_Sdk
+elif [ -d $qqAd_Sdk2 ] ; then
 	rm -rf $qqAd_Sdk2 && touch $qqAd_Sdk2
-elif [ -d $qqlive ] ; then
-	rm -rf $qqlive && touch $qqlive 
+elif [ -d $qqlive_tbs ] ; then
+	rm -rf $qqlive_tbs && touch $qqlive_tbs
 elif [  -d $qqmusic_Ad ] ; then
 	rm -rf $qqmusic_Ad && touch $qqmusic_Ad
 elif [ -d $qqmusic_Ad2 ] ; then
