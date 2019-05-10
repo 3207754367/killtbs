@@ -17,14 +17,14 @@ else
 fi
 
 if [ ! -d "$qqsplash_Ad" ] ; then
-        qqsplash_Ad=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/MobileQQ/splahAD
+        qqsplash_Ad=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/splahAD
 else
-        qqsplash_Ad2=/data/media/0/Tencent/MobileQQ/splahAD
+        qqsplash_Ad2=/data/media/0/tencent/MobileQQ/splahAD
 fi
                                                            if [ ! -d "$qqAd_Sdk" ] ;then
         qqAd_Sdk=/data/media/0/Android/data/com.tencent.mob
-ileqq/sdcard/Tencent/TMAssistantSDK                        else
-        qqAd_Sdk2=/data/media/0/Tencent/MobileQQ/splahAD
+ileqq/sdcard/tencent/TMAssistantSDK                        else
+        qqAd_Sdk2=/data/media/0/tencent/MobileQQ/splahAD
 fi
 isroot() {
 if [ `whoami` = "root" ];then
