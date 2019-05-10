@@ -37,7 +37,7 @@ chmod 000  $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqli
 }
 removetbs (){
 echo -e "
-这是一个去除tbs内核的脚本,脚本使用了系统管理员权限的Chattr命令
+这是一个去除tbs内核的脚本
 脚本将替换这些文件夹为空的文件并加入只读属性
 取消这些文件的只读属性请运行reverse.sh脚本 "
 
