@@ -20,9 +20,9 @@ else
 fi
  
 if [ ! -d $qqAd_Sdk ] ;then
-	qqAd_Sdk=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/TMAssistantSDK 
+	qqAd_Sdk=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/TMAssistantSDK 
 else 
-	qqAd_Sdk2=/data/media/0/Tencent/MobileQQ/splahAD
+	qqAd_Sdk2=/data/media/0/tencent/MobileQQ/splahAD
 fi
 
 offroot () {
