@@ -35,7 +35,7 @@ if [ `whoami` = "root" ];then
         echo "您是root用户，正在运行撤销脚本...！"
 	[ -O  $qq ] && chattr -i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2 $qqlive_tbs $qqbubble $douyin_splash && echo "只读属性撤销完成" 
 else
-        echo "您是非root用户！, 脚本无法使用系统管理员权限的Chattr命令,请切换到su权限下执行" && exit
+        echo "您是非root用户，无需进行本操作. && exit
 
 fi
 }
