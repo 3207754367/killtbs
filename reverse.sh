@@ -10,18 +10,18 @@ qqsplash_Ad2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/Mobi
 qqlive_tbs=/data/data/com.tencent.qqlive/app_tbs
 douyin_splash=/data/media/0/Android/data/com.ss.android.ugc.aweme/splashCache
 
-if [ ! -d $qqmusic_Ad ] ; then
+if [ ! -d "$qqmusic_Ad" ] ; then
         qqmusic_Ad=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash
 else
 	qqmusic_Ad2=/data/media/0/qqmusic/splash
 fi
 
-if [ ! -d $qqsplash_Ad ] ; then
+if [ ! -d "$qqsplash_Ad" ] ; then
         qqsplash_Ad=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/Tencent/MobileQQ/splahAD
 else
         qqsplash_Ad2=/data/media/0/Tencent/MobileQQ/splahAD
 fi
-                                                           if [ ! -d $qqAd_Sdk ] ;then
+                                                           if [ ! -d "$qqAd_Sdk" ] ;then
         qqAd_Sdk=/data/media/0/Android/data/com.tencent.mob
 ileqq/sdcard/Tencent/TMAssistantSDK                        else
         qqAd_Sdk2=/data/media/0/Tencent/MobileQQ/splahAD
