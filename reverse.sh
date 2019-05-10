@@ -10,6 +10,9 @@ qq_tbs=/data/data/com.tencent.mobileqq/app_tbs
 qqAd_Sdk=/data/media/0/tencent/TMAssistantSDK
 qqAd_Sdk2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/TMAssistantSDK
 qqlive_tbs=/data/data/com.tencent.qqlive/app_tbs
+qqbubble=/data/data/com.tencent.mobileqq/files/bubble_infi
+qqfont=/data/media/0/tencent/MobileQQ/.font_info
+qqfont2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/.font_info
 douyin_splash=/data/media/0/Android/data/com.ss.android.ugc.aweme/splashCache
 
 if [ ! -d "$qqmusic_Ad" ] ; then
@@ -23,10 +26,14 @@ if [ ! -d "$qqAd_Sdk" ] ;then
 else
         qqAd_Sdk2=/data/media/0/tencent/TMAssistantSDK
 fi
+
+if [ ! -d $qqfont ] ; then                                                                      qqfont=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/.font_info && echo "$qqfont2 路径不存在(无碍)"
+else
+	qqfont2=/data/media/0/tencent/MobileQQ/.font_info                               fi
 isroot() {
 if [ `whoami` = "root" ];then
         echo "您是root用户，正在运行撤销脚本...！"
-	[ -O  $qq ] && chattr -i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2 $qqlive_tbs $douyin_splash && echo "只读属性撤销完成" 
+	[ -O  $qq ] && chattr -i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2 $qqlive_tbs $qqbubble $douyin_splash && echo "只读属性撤销完成" 
 else
         echo "您是非root用户！, 脚本无法使用系统管理员权限的Chattr命令,请切换到su权限下执行" && exit
 
