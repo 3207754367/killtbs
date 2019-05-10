@@ -1,9 +1,11 @@
 #!/bin/sh
 chmod +x reverse.sh
-qqmusic_tbs=/data/data/com.tencent.qqmusic/app_tbs         qqmusic_Ad=/data/media/0/qqmusic/splash
+qqmusic_tbs=/data/data/com.tencent.qqmusic/app_tbs
+qqmusic_Ad=/data/media/0/qqmusic/splash
 qqmusic_Ad2=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash
 wx_tbs=/data/data/com.tencent.mm/app_tbs
-qq_tbs=/data/data/com.tencent.mobileqq/app_tbs             qqAd_Sdk=/data/media/0/tencent/TMAssistantSDK
+qq_tbs=/data/data/com.tencent.mobileqq/app_tbs
+qqAd_Sdk=/data/media/0/tencent/TMAssistantSDK
 qqAd_Sdk2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/TMAssistantSDK
 qqsplash_Ad=/data/media/0/tencent/MobileQQ/splahAD
 qqsplash_Ad2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/splahAD
@@ -21,9 +23,11 @@ if [ ! -d "$qqsplash_Ad" ] ; then
 else
         qqsplash_Ad2=/data/media/0/tencent/MobileQQ/splahAD
 fi
-                                                           if [ ! -d "$qqAd_Sdk" ] ;then
+
+if [ ! -d "$qqAd_Sdk" ] ;then
         qqAd_Sdk=/data/media/0/Android/data/com.tencent.mob
-ileqq/sdcard/tencent/TMAssistantSDK                        else
+ileqq/sdcard/tencent/TMAssistantSDK
+else
         qqAd_Sdk2=/data/media/0/tencent/MobileQQ/splahAD
 fi
 isroot() {
