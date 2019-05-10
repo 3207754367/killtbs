@@ -41,7 +41,6 @@ echo -e "
 脚本将替换这些文件夹为空的文件并加入只读属性
 取消这些文件的只读属性请运行reverse.sh脚本 "
 
-
 if [ -d $qqmusic_tbs ] ; then
 	rm -rf $qqmusic_tbs && touch $qqmusic_tbs
 elif [ -d $qqmusic_Ad ] ; then
