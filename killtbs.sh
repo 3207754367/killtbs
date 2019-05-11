@@ -33,12 +33,9 @@ else
 fi
 
 offroot () {
-chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble && echo "加入只读属性"
+chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble && echo "加入只读属性"
 
 }
-
-#unroot (){
-#chmod 000  $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqlive_tbs $douyin_splash $qqbubble  && echo "设置权限为000" }
 
 removetbs (){
 echo -e "
