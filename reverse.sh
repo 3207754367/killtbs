@@ -16,26 +16,28 @@ qqfont2=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/
 douyin_splash=/data/media/0/Android/data/com.ss.android.ugc.aweme/splashCache
 
 if [ ! -d "$qqmusic_Ad" ] ; then
-	qqmusic_Ad=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash && echo "$qqmusic_Ad2 路径不存在(无碍)"
+	qqmusic_Ad=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash #&& echo "$qqmusic_Ad2 路径不存在(无碍)"
 else
 	qqmusic_Ad2=/data/media/0/qqmusic/splash
 fi
 
 if [ ! -d "$qqAd_Sdk" ] ;then
-        qqAd_Sdk=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/TMAssistantSDK && echo "$qqAd_Sdk2 路径不存在(无碍)"
+        qqAd_Sdk=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/TMAssistantSDK #&& echo "$qqAd_Sdk2 路径不存在(无碍)"
 else
         qqAd_Sdk2=/data/media/0/tencent/TMAssistantSDK
 fi
 
-if [ ! -d $qqfont ] ; then                                                                      qqfont=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/.font_info && echo "$qqfont2 路径不存在(无碍)"
+if [ ! -d $qqfont ] ; then
+	qqfont=/data/media/0/Android/data/com.tencent.mobileqq/sdcard/tencent/MobileQQ/.font_info #&& echo "$qqfont2 路径不存在(无碍)"
 else
-	qqfont2=/data/media/0/tencent/MobileQQ/.font_info                               fi
+	qqfont2=/data/media/0/tencent/MobileQQ/.font_info
+fi
 isroot() {
 if [ `whoami` = "root" ];then
         echo "您是root用户，正在运行撤销脚本...！"
-	[ -O  $qq ] && chattr -i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2 $qqlive_tbs $qqbubble $douyin_splash && echo "只读属性撤销完成" 
+chattr -i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble && echo "只读属性撤销完成" 
 else
-        echo "您是非root用户，无需进行本操作. && exit
+        echo "您是非root用户,脚本无法正常运行，尝试运行 'su -c ./reverse.sh' && exit"
 
 fi
 }
