@@ -2,7 +2,7 @@
 
 chmod +x killtbs.sh
 qqmusic_tbs=/data/data/com.tencent.qqmusic/app_tbs
-pqqmusic_Ad=/data/media/0/qqmusic/splash
+qqmusic_Ad=/data/media/0/qqmusic/splash
 qqmusic_Ad2=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash
 wx_tbs=/data/data/com.tencent.mm/app_tbs
 qq_tbs=/data/data/com.tencent.mobileqq/app_tbs
