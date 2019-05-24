@@ -1,4 +1,4 @@
-#/!bin/bash
+#!/system/bin/sh
 
 chmod +x killtbs.sh
 qqmusic_tbs=/data/data/com.tencent.qqmusic/app_tbs
@@ -33,15 +33,15 @@ else
 fi
 
 offroot () {
-chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble && echo "加入只读属性"
+echo -e "`chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble`
+" && echo "设置只读属性..."
 
 }
 
 removetbs (){
 echo -e "
-这是一个去除tbs内核的脚本
-脚本将替换这些文件夹为空的文件并加入只读属性
-取消这些文件的只读属性请运行reverse.sh脚本 "
+脚本将替换文件夹为空的文件并加入只读属性
+ "
 
 if [ -d $qqmusic_tbs ] ; then
 	rm -rf $qqmusic_tbs && touch $qqmusic_tbs
@@ -68,7 +68,7 @@ elif [ -d $qqfont2 ] ; then
 elif [ -d $douyin_splash ] ; then
 	rm -rf $douyin_splash && touch $douyin_splash
 else
-	 $istype  && echo  完成
+	 $istype  && echo  取消这些文件的只读属性请运行reset.sh脚本
 	fi
 }
 
