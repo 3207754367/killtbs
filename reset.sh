@@ -1,7 +1,6 @@
 #!/bin/sh
 
 chmod +x reverse.sh
-
 qqmusic_tbs=/data/data/com.tencent.qqmusic/app_tbs
 qqmusic_Ad=/data/media/0/qqmusic/splash
 qqmusic_Ad2=/data/media/0/Android/data/com.tencent.qqmusic/sdcard/qqmusic/splash
