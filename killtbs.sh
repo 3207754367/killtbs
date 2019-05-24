@@ -73,7 +73,7 @@ else
 }
 
 isroot() {
-if [ `whoami` = "root" ];then
+if [ `busybox whoami` = "root" ];then
 	echo "您是root用户，载入脚本...！" && istype=offroot &&  removetbs
 
 else
