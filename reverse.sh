@@ -33,7 +33,7 @@ else
 	qqfont2=/data/media/0/tencent/MobileQQ/.font_info
 fi
 isroot() {
-if [ `whoami` = "root" ];then
+if [ `busybox whoami` = "root" ];then
         echo "您是root用户，正在运行撤销脚本...！"
 chattr -i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble && echo "只读属性撤销完成" 
 else
