@@ -1,4 +1,4 @@
-#!/system/bin/sh
+#!/bin/sh
 
 chmod +x killtbs.sh
 qqmusic_tbs=/data/data/com.tencent.qqmusic/app_tbs
