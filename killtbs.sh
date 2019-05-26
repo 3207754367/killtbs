@@ -33,7 +33,7 @@ else
 fi
 
 onroot () {
-busybox chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubbl&& echo "设置只读属性完成，已输出错误日志到log.txt" > log.txt> 2>&1
+busybox chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubbl&& echo "设置只读属性完成，已输出错误日志到log.txt" > log.txt 2>&1
 }
 
 removetbs (){
