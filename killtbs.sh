@@ -33,11 +33,11 @@ else
 fi
 
 onroot () {
-busybox chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubbl&& echo "设置只读属性完成，已输出错误日志到log.txt" > log.txt 2>&1
+busybox chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble >log.txt 2>&1 && echo "设置只读属性完成，已输出错误日志到log.txt"
 }
 
 removetbs (){
-echo 脚本将替换文件夹为空的文件并加入只读属性
+echo 脚本将替换相关文件夹为空的文件并加入只读属性
 if [ -d $qqmusic_tbs ] ; then
 	rm -rf $qqmusic_tbs && touch $qqmusic_tbs
 elif [ -d $qqmusic_Ad ] ; then
