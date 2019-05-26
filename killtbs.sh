@@ -32,7 +32,7 @@ else
 	qqfont2=/data/media/0/tencent/MobileQQ/.font_info
 fi
 
-offroot () {
+onroot () {
 echo -e "`chattr +i $qqmusic_tbs $qqmusic_Ad $qqmusic_Ad2 $wx_tbs $qq_tbs $qqAd_Sdk $qqAd_Sdk2  $qqfont $qqfont2 $qqlive_tbs $douyin_splash $qqbubble`
 " && echo "设置只读属性..."
 
@@ -74,7 +74,7 @@ else
 
 isroot() {
 if [ `busybox whoami` = "root" ];then
-	echo "您是root用户，载入脚本...！" && istype=offroot &&  removetbs
+	echo "您是root用户，载入脚本...！" && istype=onroot &&  removetbs
 
 else
 	echo "
