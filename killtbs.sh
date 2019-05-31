@@ -63,13 +63,14 @@ elif [ -d $qqfont2 ] ; then
 elif [ -d $douyin_splash ] ; then
 	rm -rf $douyin_splash && touch $douyin_splash
 else
-	 $istype  && echo  取消只读属性请运行reset.sh脚本
+	echo  "取消只读属性请运行reset.sh脚本" && onroot
+	
 	fi
 }
 
 isroot() {
 if [ `busybox whoami` = "root" ];then
-	echo "您是root用户，载入脚本...！" && istype=onroot &&  removetbs
+	echo "您是root用户，载入脚本...！" &&  removetbs
 
 else
 	echo "
